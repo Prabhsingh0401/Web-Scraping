@@ -1,11 +1,6 @@
 import requests
 
-proxies = {
-  "http": "http://10.10.1.10:3128",
-  "https": "https://10.10.1.10:1080",
-}
-
-requests.get("https://www.toppr.com/", proxies=proxies)
+#visit this website to get a soup commands <https://www.crummy.com/software/BeautifulSoup/bs4/doc/>
 
 def fetchAndSaveToFile(url, path):
     r = requests.get(url)
