@@ -7,6 +7,6 @@ def fetchAndSaveToFile(url, path):
     with open(path  , "w") as f:
         f.write(r.text)
 
-url="https://www.toppr.com/"
+url="https://www.learncbse.in/ncert-solutions-for-class-10-english-literature/"
 
-fetchAndSaveToFile(url , "data/Times.html")
+fetchAndSaveToFile(url , "data/Learncbse.html")
