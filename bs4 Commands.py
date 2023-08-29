@@ -17,7 +17,7 @@ print (soup.div)  # this only gives the first Div also you can replace the word 
 print (soup.find_all("div"))  # to get all the divs and element entered in bracket 
 
 for link in soup.find_all('a'):
-    print(link.get("href"))         # To get all the links in html
+    print(link.get("href"))         # To get all the links in html file
     
 for link in soup.find_all('a'):
     print(link.get_text())          # To get the text enclosed in anchor tag 
