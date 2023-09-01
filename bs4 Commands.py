@@ -50,5 +50,8 @@ ulTag.append(liTag)                     # This is used to append any list into t
 soup.html.body.insert(0, ulTag)
 with open("Landing Page.html", "w") as f:
     f.write(str(soup))
+    
+cont = soup.find(class_="container")
+print(cont.has_attr("class"))           # This statement will return whether the entered parent class has the following attribute or not 
 
 
