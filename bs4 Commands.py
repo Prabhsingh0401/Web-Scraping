@@ -12,9 +12,9 @@ print(soup.prettify())  # the file is read by this command
 
 print(soup.title.string, type(soup.title.string))  # Gives the title of html file - type gives the type of title 
 
-print (soup.div)  # this only gives the first Div also you can replace the word div with any element like a , p  etc 
+print (soup.div)  # This only gives the first Div also you can replace the word div with any element like a , p  etc 
 
-print (soup.find_all("div"))  # to get all the divs and element entered in bracket 
+print (soup.find_all("div"))  # To get all the divs and element entered in bracket 
 
 for link in soup.find_all('a'):
     print(link.get("href"))         # To get all the links in html file
