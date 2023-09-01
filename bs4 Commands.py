@@ -32,7 +32,23 @@ for parent in soup.find(class_="box").parents:
     print(parent)                   # To Print all the parent classes in html file 
     
 cont=soup.find(class_="container")
-cont.name="span"
-cont["class"] = "myclass"
-print(cont)                          # To change the name of container tag to span 
-               
+cont.name="span"                    # To change the name of container tag to span 
+cont["class"] = "myclass"           # To change the class name               
+cont.string = "i am a string"       # To insert the string in the class  
+print(cont)                   
+
+ulTag = soup.new_tag("ul")
+
+liTag = soup.new_tag("li")
+liTag,string = "Home"
+ulTag.append(liTag)
+
+liTag = soup.new_tag("li")
+liTag,string = "About"
+ulTag.append(liTag)                     # This is used to append any list into the existing list of html file 
+
+soup.html.body.insert(0, ulTag)
+with open("Landing Page.html", "w") as f:
+    f.write(str(soup))
+
+
