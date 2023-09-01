@@ -27,3 +27,12 @@ print(soup.find_all(class_="icon"))
 
 for child in soup.find(class_="container").children:
     print(child)                    # To get child boxes in div classes       
+   
+for parent in soup.find(class_="box").parents:
+    print(parent)                   # To Print all the parent classes in html file 
+    
+cont=soup.find(class_="container")
+cont.name="span"
+cont["class"] = "myclass"
+print(cont)                          # To change the name of container tag to span 
+               
