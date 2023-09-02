@@ -1,3 +1,5 @@
+#This Section is used to change the proxy of network or simply change the IP Address 
+
 import requests
 
 proxies = {

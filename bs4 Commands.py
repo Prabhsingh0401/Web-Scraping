@@ -1,14 +1,14 @@
 import requests
 from bs4 import BeautifulSoup
 
-with open("Landing Page.html", "r") as f: #insert the name of html file which you want to read 
+with open("Landing Page.html", "r") as f: #Insert the name of html file which you want to read 
     html_doc = f.read() 
 
-soup = BeautifulSoup(html_doc, 'html.parser') # here beautiful soap is going to convert the html file which is easily readable by it.
+soup = BeautifulSoup(html_doc, 'html.parser') # Here beautiful soap is going to convert the html file which is easily readable by it.
 
 #COMMANDS FOR BS4 
 
-print(soup.prettify())  # the file is read by this command 
+print(soup.prettify())  # The file is read by this command 
 
 print(soup.title.string, type(soup.title.string))  # Gives the title of html file - type gives the type of title 
 
@@ -32,6 +32,7 @@ for parent in soup.find(class_="box").parents:
     print(parent)                   # To Print all the parent classes in html file 
     
 cont=soup.find(class_="container")
+
 cont.name="span"                    # To change the name of container tag to span 
 cont["class"] = "myclass"           # To change the class name               
 cont.string = "i am a string"       # To insert the string in the class  
