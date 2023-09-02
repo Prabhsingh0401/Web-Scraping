@@ -55,4 +55,5 @@ with open("Landing Page.html", "w") as f:
 cont = soup.find(class_="container")
 print(cont.has_attr("class"))           # This statement will return whether the entered parent class has the following attribute or not 
 
-
+def has_class_but_not_id(tag):
+    return tag.has_attr("class") and not tag.has_attr("id")   # It will only return the attributes which has class but not ID 
