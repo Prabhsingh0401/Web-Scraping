@@ -57,3 +57,6 @@ print(cont.has_attr("class"))           # This statement will return whether the
 
 def has_class_but_not_id(tag):
     return tag.has_attr("class") and not tag.has_attr("id")   # It will only return the attributes which has class but not ID 
+
+results = soup.find_all(has_class_but_not_id)
+print(results)                          # This give only those elements which gives the answer true to the above definition.
