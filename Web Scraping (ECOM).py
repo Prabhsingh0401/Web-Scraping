@@ -34,5 +34,5 @@ span = soup.find(class_="a-size-medium")
 print(span)
 data['Title'].append(span.string)       # This is to append the other data in form of dataframe
 
-df = pd.DataFrame.from_dict{data}
+df = pd.DataFrame.from_dict(data)
 df.to_csv('data.csv', index= False )    # This will form the data in the named csv file  
